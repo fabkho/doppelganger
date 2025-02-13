@@ -1,18 +1,18 @@
-# Laravel Data Sync
+# Laravel Doppelganger
 
-A flexible package for copying models and their relationships between different Laravel database connections.
+A flexible Laravel package for copying models and their relationships between different Laravel database connections.
 
 ## Installation
 
 ```bash
-composer require your-vendor/laravel-data-sync
+composer require fabkho/doppelganger
 ```
 
 ## Configuration
 
 Publish the config:
 ```bash
-php artisan vendor:publish --tag="data-sync-config"
+php artisan vendor:publish --tag="doppelganger-config"
 ```
 
 ## Usage

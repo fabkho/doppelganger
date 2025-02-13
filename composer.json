@@ -1,14 +1,18 @@
 {
-    "name": "your-vendor/laravel-data-sync",
+    "name": "fabkho/doppelganger",
     "description": "A flexible package for copying models and their relationships between different Laravel database connections",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Your Name",
-            "email": "your.email@example.com"
+            "name": "Fabian Kirchhoff",
+            "email": "fab.kirchhoff98@gmail.com"
         }
     ],
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
     "require": {
         "php": "^8.1",
         "illuminate/support": "^9.0|^10.0",
@@ -16,25 +20,26 @@
     },
     "require-dev": {
         "orchestra/testbench": "^7.0|^8.0",
-        "phpunit/phpunit": "^9.0|^10.0"
+        "phpunit/phpunit": "^9.0|^10.0",
+        "laravel/framework": "^10.48"
     },
     "autoload": {
         "psr-4": {
-            "YourVendor\\DataSync\\": "src/"
+            "fabkho\\doppelganger\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "YourVendor\\DataSync\\Tests\\": "tests/"
+            "fabkho\\doppelganger\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "YourVendor\\DataSync\\DataSyncServiceProvider"
+                "fabkho\\doppelganger\\DoppelgangerServiceProvider"
             ],
             "aliases": {
-                "DataSync": "YourVendor\\DataSync\\Facades\\DataSync"
+                "DataSync": "fabkho\\doppelganger\\Facades\\Doppelganger"
             }
         }
     },
