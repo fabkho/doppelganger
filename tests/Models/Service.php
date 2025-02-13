@@ -52,9 +52,4 @@ class Service extends Model
     {
         return $this->belongsTo(Resource::class);
     }
-
-    public function logs(): \Illuminate\Database\Eloquent\Relations\HasMany
-    {
-        return $this->hasMany(ServiceLog::class);
-    }
 }
